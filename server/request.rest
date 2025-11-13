@@ -6,4 +6,53 @@
 ### @token = 12|ibiwTdr77o8ppToh1tBxIkckBNb8ECjIjLgaweTaa757cdef
 
 ### teszt
-get {{host}}/api/
+get {{host}}/api/x
+
+
+### get methods
+OPTIONS {{host}}/api/products
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer
+
+
+
+### get products
+get {{host}}/api/instruments
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer
+
+
+### get product by id
+get {{host}}/api/instruments/1
+
+
+### post products
+POST  {{host}}/api/instruments
+Accept: application/json
+Content-Type: application/json
+
+{
+    
+    "name": "f3333",
+    "description": "Kézzel termelt egészség",
+    "brand": "brandike",
+    "price": 8000,
+    "quantity": 22
+}
+
+### delete product by id
+delete {{host}}/api/instruments/15
+
+
+### post products
+PATCH {{host}}/api/instruments/1
+Accept: application/json
+Content-Type: application/json
+
+
+{
+    "price": 1002,
+    "stock": "eee"
+}
